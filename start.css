@@ -1,0 +1,91 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.wrapper {
+  width: 630px;
+  height: 340px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 4px solid #E6E6E6;
+  padding: 16px;
+  box-shadow: -1px -1px 8px 8px rgba(230, 230, 230, 0.5);
+  text-align: center;
+}
+
+.search-box {
+  height: 80px;
+}
+
+.search-input {
+  width: 380px;
+  height: 35px;
+  border: 1px solid #E6E6E6;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+.search-button {
+  border: 1px solid #E6E6E6;
+  background-color: #87a556;
+  color: white;
+  height: 35px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  opacity: 0.7;
+}
+
+.link-box {
+  height: 60px;
+}
+
+.link-box > a {
+  display: inline-block;
+  margin: 16px;
+  text-decoration: initial;
+  color: gray;
+}
+
+.link-box > a:hover {
+  opacity: 0.7;
+}
+
+/*****************
+ * Spritesheet
+ *****************/
+.link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  background-image: url('spritesheet.png');
+  margin-right: 2px;
+}
+
+.link.about {
+  background-position: 0px 0px;
+}
+
+.link.community {
+  background-position: -32px 0px;
+}
+
+.link.shop {
+  background-position: -64px 0px;
+}
+
+.link.chat {
+  background-position: -96px 0px;
+}
+
+.link.search {
+  background-position: -128px 0px;
+}
