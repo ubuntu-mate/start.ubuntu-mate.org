@@ -36,6 +36,7 @@ body {
   background-color: #87a556;
   color: white;
   height: 35px;
+  width: 48px;
   cursor: pointer;
 }
 
@@ -67,7 +68,7 @@ body {
   height: 32px;
   vertical-align: middle;
   background-image: url('spritesheet.png');
-  margin-right: 2px;
+  margin-right: 6px;
 }
 
 .link.about {
