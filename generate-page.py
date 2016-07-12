@@ -12,11 +12,6 @@ try:
 except:
     print("Requires 'python3-csscompressor' package.")
 
-try:
-    import tidylib
-except:
-    print("Requires 'python3-tidylib' package.")
-
 ######################################
 def load(path):
     f = open(path, "r")
@@ -38,13 +33,6 @@ def compress(filename):
     path = os.path.join(build_dir, filename)
     data = load(path)
     newdata = csscompressor.compress(data)
-    save(path, newdata)
-
-def minify(filename):
-    print("Minifying: " + filename)
-    path = os.path.join(build_dir, filename)
-    data = load(path)
-    newdata = tidylib.tidy_document(data)[0]
     save(path, newdata)
 
 def strip(filename):
