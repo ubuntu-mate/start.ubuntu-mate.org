@@ -67,10 +67,15 @@ body {
   margin: 16px;
   text-decoration: initial;
   color: gray;
+  -webkit-filter: grayscale(100%);
+  -moz-filter:    grayscale(100%);
 }
 
 .link-box > a:hover {
   opacity: 0.7;
+  color: #87A556;
+  -webkit-filter: grayscale(0%);
+  -moz-filter:    grayscale(0%);
 }
 
 input[type="radio"] {
