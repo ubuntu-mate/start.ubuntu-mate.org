@@ -14,10 +14,6 @@ except:
     print("Requires 'python3-csscompressor' package.")
     exit(1)
 
-if not os.path.exists("/usr/bin/convert"):
-    print("Requires 'convert' command from imagemagick package.")
-    exit(1)
-
 ######################################
 def load(path):
     f = open(path, "r")
@@ -65,10 +61,6 @@ def convert_base64(filename):
         encoded_string = base64.b64encode(image_file.read()).decode("utf-8")
     return(str(encoded_string))
 
-def convert_img(filename):
-    newname = filename.split('.')[0] + '.jpg'
-    os.system("convert -flatten {0} {1}".format(filename, newname))
-
 ######################################
 cur_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 build_dir = os.path.join(cur_dir, "build")
@@ -99,14 +91,10 @@ replace("index.html", \
         "<script>" + load("start.js") + "</script>")
 replace("index.html", "><", ">\n<")
 
-# --> Compress & Embed Images
+# --> Embed Images
 replace("index.html", 'favicon.ico', 'data:image/ico;base64,' + convert_base64("favicon.ico"))
-
-convert_img("logo.png")
-replace("index.html", 'logo.png', 'data:image/jpg;base64,' + convert_base64("logo.jpg"))
-
-convert_img("spritesheet.png")
-replace("index.html", 'spritesheet.png', 'data:image/jpg;base64,' + convert_base64("spritesheet.jpg"))
+replace("index.html", 'logo.png', 'data:image/jpg;base64,' + convert_base64("logo.png"))
+replace("index.html", 'spritesheet.png', 'data:image/jpg;base64,' + convert_base64("spritesheet.png"))
 
 # --> Clean up unused files
 for ext in ["css", "ico", "png", "jpg", "js"]:
