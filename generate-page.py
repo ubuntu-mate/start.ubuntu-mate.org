@@ -45,6 +45,9 @@ def strip(filename):
     for line in data.split('\n'):
         if line.startswith('/*') or len(line) == 0:
             continue
+        line = line.replace(' > ','>')
+        line = line.replace(': ',':')
+        line = line.replace(' {','{')
         newdata += line.strip() + '\n'
     save(path, newdata)
 

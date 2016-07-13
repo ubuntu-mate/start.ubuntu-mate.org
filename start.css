@@ -77,7 +77,7 @@ body {
 .link-box > a:hover {
   opacity: 0.7;
   color: #87A556;
-  filter:    grayscale(0%);
+  filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
 }
 
