@@ -30,6 +30,8 @@ body {
 }
 
 .search-button {
+  position: relative;
+  top: -2px;
   border: 1px solid #E6E6E6;
   background-color: #87a556;
   color: white;
