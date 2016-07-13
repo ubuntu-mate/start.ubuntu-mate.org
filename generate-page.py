@@ -47,6 +47,8 @@ def strip(filename):
     data = load(path)
     newdata = ""
     for line in data.split('\n'):
+        if line.startswith('/*') or len(line) == 0:
+            continue
         newdata += line.strip() + '\n'
     save(path, newdata)
 
