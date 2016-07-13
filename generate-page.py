@@ -93,8 +93,8 @@ replace("index.html", "><", ">\n<")
 
 # --> Embed Images
 replace("index.html", 'favicon.ico', 'data:image/ico;base64,' + convert_base64("favicon.ico"))
-replace("index.html", 'logo.png', 'data:image/jpg;base64,' + convert_base64("logo.png"))
-replace("index.html", 'spritesheet.png', 'data:image/jpg;base64,' + convert_base64("spritesheet.png"))
+replace("index.html", 'logo.png', 'data:image/png;base64,' + convert_base64("logo.png"))
+replace("index.html", 'spritesheet.png', 'data:image/png;base64,' + convert_base64("spritesheet.png"))
 
 # --> Clean up unused files
 for ext in ["css", "ico", "png", "jpg", "js"]:
