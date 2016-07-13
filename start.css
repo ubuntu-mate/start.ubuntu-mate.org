@@ -13,9 +13,7 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  border: 4px solid #E6E6E6;
   padding: 16px;
-  box-shadow: -1px -1px 8px 8px rgba(230, 230, 230, 0.5);
   text-align: center;
 }
 
@@ -45,7 +43,13 @@ body {
 }
 
 .link-box {
+  position: fixed;
   height: 60px;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
 }
 
 .link-box > a {
