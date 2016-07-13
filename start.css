@@ -42,6 +42,16 @@ body {
   opacity: 0.7;
 }
 
+#engines {
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 8px;
+  width: 428px;
+  text-align: left;
+  font-size: 14px;
+}
+
 .link-box {
   position: fixed;
   height: 60px;
@@ -63,9 +73,17 @@ body {
   opacity: 0.7;
 }
 
-/*****************
- * Spritesheet
- *****************/
+input[type="radio"] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 10px;
+}
+
+input[type="radio"] {
+  bottom: 3px;
+}
+
+/* Spritesheets */
 .link {
   display: inline-block;
   width: 32px;
@@ -96,4 +114,16 @@ body {
 
 .link.search {
   background-position: -128px 0px;
+}
+
+.link.google {
+  background-position: -160px 0px;
+  width: 71px;
+  height: 24px;
+}
+
+.link.duckduckgo {
+  background-position: -232px 0px;
+  width: 120px;
+  height: 22px;
 }

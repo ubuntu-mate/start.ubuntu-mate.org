@@ -10,14 +10,23 @@
     <div class="wrapper">
         <img src="logo.png" width="630px" height="200px"/>
         <div class="search-box">
-            <form method="get" class="search-form" action="https://www.google.com/search" name="search">
-                <input type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" />&nbsp;<button id="sbtn" class="search-button" type="submit"><div class="link search"></div></button>
+            <form method="get" class="search-form ggl" action="https://www.google.com/search" name="search" style="display:none">
+                <input type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" />
+                <button class="search-button" type="submit"><div class="link search"></div></button>
                 <input type="hidden" name="ie" value="UTF-8" />
                 <input type="hidden" name="sa" value="Search" />
                 <input type="hidden" name="channel" value="fe">
                 <input type="hidden" name="client" value="browser-ubuntu">
                 <input title="search" type="hidden" name="hl" value="en" />
             </form>
+            <form class="ddg" action="https://duckduckgo.com/" style="display:none">
+              <input type="text" class="search-input" name="q">
+              <button class="search-button" type="submit"><div class="link search"></div></button>
+            </form>
+            <div id="engines">
+                <label><input id="ggl" name="engine" type="radio" onclick="setSearch('ggl')"/> <div class="link google"></div></label>
+                <label><input id="ddg" name="engine" type="radio" onclick="setSearch('ddg')"/> <div class="link duckduckgo"></div></label>
+            </div>
         </div>
     </div>
     <div class="link-box">
