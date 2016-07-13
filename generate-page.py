@@ -78,7 +78,7 @@ os.mkdir(build_dir)
 os.chdir(build_dir)
 
 # Copy files to target
-for ext in ["ico", "png", "html", "css"]:
+for ext in ["ico", "png", "html", "css", "js"]:
     path = glob.glob(cur_dir + '/*.' + ext)
     for file in path:
         print("Copying: " + file)
@@ -87,10 +87,14 @@ for ext in ["ico", "png", "html", "css"]:
 # Perform optimisation
 # --> Compress Pages
 compress("index.html")
+compress("start.js")
 strip("start.css")
 replace("index.html", \
         '<link rel="stylesheet" type="text/css\" media="screen" href="start.css">', \
         "<style>" + load("start.css") + "</style>")
+replace("index.html", \
+        '<script src="start.js"></script>', \
+        "<script>" + load("start.js") + "</script>")
 replace("index.html", "><", ">\n<")
 
 # --> Compress & Embed Images
@@ -103,7 +107,7 @@ convert_img("spritesheet.png")
 replace("index.html", 'spritesheet.png', 'data:image/jpg;base64,' + convert_base64("spritesheet.jpg"))
 
 # --> Clean up unused files
-for ext in ["css", "ico", "png", "jpg"]:
+for ext in ["css", "ico", "png", "jpg", "js"]:
     path = glob.glob(build_dir + '/*.' + ext)
     for file in path:
         os.remove(file)
