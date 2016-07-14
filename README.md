@@ -3,6 +3,7 @@
 A personalised start page for Ubuntu MATE users
 on Firefox.
 
+[![Build Status](https://semaphoreci.com/api/v1/lah7/start-ubuntu-mate-org/branches/master/shields_badge.svg)](https://semaphoreci.com/lah7/start-ubuntu-mate-org)
 
 ## Features
 
