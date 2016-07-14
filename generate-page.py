@@ -6,13 +6,7 @@ import inspect
 import glob
 import shutil
 import base64
-
-######################################
-try:
-    import csscompressor
-except:
-    print("Requires 'python3-csscompressor' package.")
-    exit(1)
+import csscompressor        # Can be installed in python3-csscompressor package.
 
 ######################################
 def load(path):
