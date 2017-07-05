@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt-get -y install rsync
-
 if [ -f build/index.html ]; then
     for HOST in man yor; do
         echo "Deploying to: ${HOST}"
@@ -9,4 +7,6 @@ if [ -f build/index.html ]; then
     done
 else
     echo "ERROR! build/index.html was not found."
+    exit 1
 fi
+
