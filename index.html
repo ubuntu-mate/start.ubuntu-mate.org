@@ -12,7 +12,7 @@
         <img src="logo.png" width="630px" height="200px"/>
         <div class="search-box">
             <form method="get" class="search-form ggl" action="https://www.google.com/search" name="search" style="display:none">
-                <input type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" autofocus/>
+                <input id="ggl-searchbox" type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" autofocus/>
                 <button class="search-button" type="submit"><div class="link search"></div></button>
                 <input type="hidden" name="ie" value="UTF-8" />
                 <input type="hidden" name="sa" value="Search" />
@@ -21,7 +21,7 @@
                 <input title="search" type="hidden" name="hl" value="en" />
             </form>
             <form class="ddg" action="https://duckduckgo.com/" style="display:none">
-              <input type="search" class="search-input" name="q" autofocus>
+              <input id="ddg-searchbox" type="search" class="search-input" name="q" autofocus/>
               <button class="search-button" type="submit"><div class="link search"></div></button>
             </form>
             <div id="engines">

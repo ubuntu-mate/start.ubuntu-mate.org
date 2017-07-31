@@ -27,9 +27,11 @@ function getSearch() {
     if ( engine == "ddg" ) {
         show("ddg");
         document.getElementById("ddg").checked = true;
+        document.getElementById("ddg-searchbox").focus();
     } else {
         show("ggl");
         document.getElementById("ggl").checked = true;
+        document.getElementById("ggl-searchbox").focus();
     }
 }
 
