@@ -78,14 +78,23 @@ for ext in ["ico", "png", "html", "css", "js"]:
 # Perform optimisation
 # --> Compress Pages
 compress("index.html")
-compress("start.js")
+
 strip("start.css")
 replace("index.html", \
-        '<link rel="stylesheet" type="text/css\" media="screen" href="start.css">', \
+        '<link rel="stylesheet" type="text/css\" href="start.css">', \
         "<style>" + load("start.css") + "</style>")
+
+strip("spritesheet.css")
+replace("index.html", \
+        '<link rel="stylesheet" type="text/css\" href="spritesheet.css">', \
+        "<style>" + load("spritesheet.css") + "</style>")
+
+compress("start.js")
 replace("index.html", \
         '<script src="start.js"></script>', \
         "<script>" + load("start.js") + "</script>")
+
+compress("locale.js")
 replace("index.html", \
         '<script src="locale.js"></script>', \
         "<script>" + load("locale.js") + "</script>")
