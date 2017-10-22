@@ -86,6 +86,9 @@ replace("index.html", \
 replace("index.html", \
         '<script src="start.js"></script>', \
         "<script>" + load("start.js") + "</script>")
+replace("index.html", \
+        '<script src="locale.js"></script>', \
+        "<script>" + load("locale.js") + "</script>")
 replace("index.html", "><", ">\n<")
 
 # --> Embed Images
