@@ -71,14 +71,12 @@ body {
   text-decoration: initial;
   color: gray;
   filter:    grayscale(100%);
-  -webkit-filter: grayscale(100%);
 }
 
 .link-box > a:hover {
   opacity: 0.7;
   color: #87A556;
   filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
 }
 
 input[type="radio"] {
@@ -89,4 +87,41 @@ input[type="radio"] {
 
 input[type="radio"] {
   bottom: 3px;
+}
+
+/* Toolbar */
+#toolbar {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+#toolbar > a {
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+#toolbar > a:focus,
+#toolbar > a:hover {
+    filter: grayscale(0);
+    opacity: 0.7;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #3C3A36;
+    color: #fff;
+}
+
+body.dark input {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark .link-box > a {
+    filter: grayscale(100%) invert(1);
+}
+
+body.dark .link-box > a:hover {
+    filter: grayscale(0);
 }

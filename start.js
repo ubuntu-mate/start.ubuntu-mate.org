@@ -5,6 +5,7 @@ if ( localStorage.getItem("search") === null ) {
     localStorage.setItem("search", "ggl");
 }
 
+/* Common */
 function hide(div) {
     document.getElementsByClassName(div)[0].style.display = 'none';
 }
@@ -38,6 +39,7 @@ function setLocale() {
     appendText("link-donate", localeDict.donate);
     document.getElementById("ggl-searchbox").placeholder = localeDict.searchbox;
     document.getElementById("ddg-searchbox").placeholder = localeDict.searchbox;
+    document.getElementById("darkmode").title = localeDict.darkmode;
 }
 
 /* Change preferred search engine */
@@ -62,6 +64,34 @@ function getSearch() {
     }
 }
 
+/* Dark mode */
+function setDarkMode(state) {
+    if (state === true) {
+        document.body.className = "dark";
+    } else {
+        document.body.className = "";
+    }
+}
+
+function toggleDarkMode() {
+    if ( localStorage.getItem("darkmode") === "true" ) {
+        localStorage.setItem("darkmode", "false");
+        setDarkMode(false);
+    } else {
+        localStorage.setItem("darkmode", "true");
+        setDarkMode(true);
+    }
+}
+
+setTimeout(function() {
+    /* Smooth fade toggle, except Firefox */
+    document.body.setAttribute("style", "transition: background-color 0.2s linear; -moz-transition: none;");
+}, 500);
+
 /* On page entrance */
+if ( localStorage.getItem("darkmode") === "true" ) {
+    setDarkMode(true);
+}
+
 getSearch();
 setLocale();

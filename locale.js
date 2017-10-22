@@ -6,6 +6,7 @@ var locales = {
         "chat": "Chat",
         "donate": "Donate",
         "searchbox": "Search the web",
-        "settings": "Preferences"
+        "settings": "Preferences",
+        "darkmode": "Toggle dark mode"
     }
 };
