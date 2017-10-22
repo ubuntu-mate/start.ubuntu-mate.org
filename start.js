@@ -1,7 +1,7 @@
 /* Code for storing/processing settings for this page */
 
 /* Defaults */
-if ( localStorage.getItem("search") == null ) {
+if ( localStorage.getItem("search") === null ) {
     localStorage.setItem("search", "ggl");
 }
 
@@ -25,18 +25,19 @@ function appendText(div, text) {
 function setLocale() {
     var locale = navigator.language;
     if (! locales.hasOwnProperty(locale)) {
-        var locale = locale.substring(0,2);
+        locale = locale.substring(0,2);
         if (! locales.hasOwnProperty(locale)) {
             locale = "en";
         }
     }
-    appendText("link-about", locales[locale]["discover"]);
-    appendText("link-community", locales[locale]["community"]);
-    appendText("link-shop", locales[locale]["shop"]);
-    appendText("link-chat", locales[locale]["chat"]);
-    appendText("link-donate", locales[locale]["donate"]);
-    document.getElementById("ggl-searchbox").placeholder = locales[locale]["searchbox"];
-    document.getElementById("ddg-searchbox").placeholder = locales[locale]["searchbox"];
+    var localeDict = locales[locale];
+    appendText("link-about", localeDict.discover);
+    appendText("link-community", localeDict.community);
+    appendText("link-shop", localeDict.shop);
+    appendText("link-chat", localeDict.chat);
+    appendText("link-donate", localeDict.donate);
+    document.getElementById("ggl-searchbox").placeholder = localeDict.searchbox;
+    document.getElementById("ddg-searchbox").placeholder = localeDict.searchbox;
 }
 
 /* Change preferred search engine */
