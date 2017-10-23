@@ -8,8 +8,7 @@ var locales = {
         "searchbox": "Search the web",
         "settings": "Preferences",
         "darkmode": "Toggle dark mode"
-    }
-};
+    },
     "es": {
         "discover": "Descubrir",
         "community": "Comunidad",
