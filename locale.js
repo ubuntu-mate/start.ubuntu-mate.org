@@ -10,3 +10,14 @@ var locales = {
         "darkmode": "Toggle dark mode"
     }
 };
+    "es": {
+        "discover": "Descubrir",
+        "community": "Comunidad",
+        "shop": "Boutique",
+        "chat": "Chat",
+        "donate": "Donar",
+        "searchbox": "Buscar en la web",
+        "settings": "Preferencias",
+        "darkmode": "Cambiar a modo nocturno"
+    }
+};
