@@ -60,7 +60,7 @@ def convert_base64(filename):
 
 ######################################
 cur_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-build_dir = os.path.join(cur_dir, "build")
+build_dir = os.path.join(cur_dir, "dist")
 
 # Create target directory
 if os.path.exists(build_dir):
