@@ -1,0 +1,163 @@
+/*********************
+ * Main
+*********************/
+body, * {
+    font-family: "Ubuntu", "Droid Sans", "Open Sans", Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    overflow: hidden;
+}
+
+/*********************
+ * Logo
+*********************/
+#logo {
+    margin: auto 0 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logo svg {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px lightgray;
+}
+
+/*********************
+ * Search
+*********************/
+.search-box {
+    height: 80px;
+    padding: 15px 0;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.search-input {
+    width: 380px;
+    height: 35px;
+    border: 1px solid #E6E6E6;
+    font-size: 16px;
+    text-indent: 6px;
+    vertical-align: middle;
+}
+
+.search-button {
+    border: 1px solid #E6E6E6;
+    background-color: #87a556;
+    color: white;
+    height: 35px;
+    width: 48px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.search-button:hover {
+    opacity: 0.7;
+}
+
+.search-button svg {
+    height: 16px;
+    width: 16px;
+}
+
+.search-button svg path {
+    fill: white;
+}
+
+/*********************
+ * Current Engine
+*********************/
+#current-engine {
+    display: flex;
+    margin: 8px auto;
+    width: 428px;
+    text-align: left;
+    font-size: 14px;
+}
+
+#current-engine #powered-by {
+    max-height: 30px;
+    max-width: 200px;
+    margin: 0 0 auto 0;
+    opacity: 0.5;
+}
+
+#current-engine svg {
+    max-height: 20px;
+    max-width: 200px;
+    margin: 0 5px;
+}
+
+/*********************
+ * Project Links
+*********************/
+.links {
+    height: 60px;
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.links > a {
+    display: inline-block;
+    margin: 16px;
+    text-decoration: initial;
+    color: gray;
+    filter: grayscale(100%);
+}
+
+.links > a:hover {
+    opacity: 0.7;
+    color: #87A556;
+    filter: grayscale(0);
+}
+
+.links svg {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+.links svg path {
+    fill: #87a556;
+}
+
+.links span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+
+/*********************
+ * Dark Mode
+*********************/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #3C3A36;
+        color: #fff;
+    }
+
+    body input {
+        background-color: #000;
+        color: #fff;
+    }
+
+    body .link-box > a {
+        filter: grayscale(100%) invert(1);
+    }
+
+    body .link-box > a:hover {
+        filter: grayscale(0);
+    }
+
+    #logo svg {
+        box-shadow: 0px 0px 10px 0px black;
+    }
+}

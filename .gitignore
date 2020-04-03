@@ -1,2 +1,8 @@
-# Compiled files
-dist/
+# Caches
+.jekyll-cache/
+.sass-cache/
+
+# Output
+_site/
+i18n/*.json
+!i18n/en.json

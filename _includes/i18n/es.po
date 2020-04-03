@@ -1,0 +1,38 @@
+#. extracted from template.json
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-02 21:02+0100\n"
+"PO-Revision-Date: 2020-04-02 22:41+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Geany / PoHelper 1.37\n"
+
+#: .discover
+msgid "Discover"
+msgstr "Descubrir"
+
+#: .community
+msgid "Community"
+msgstr "Comunidad"
+
+#: .shop
+msgid "Emporium"
+msgstr ""
+
+#: .donate
+msgid "Funding"
+msgstr ""
+
+#: .searchbox
+msgid "Search the web"
+msgstr "Buscar en la web"
+
+#: .settings
+msgid "Preferences"
+msgstr "Preferencias"

@@ -1,47 +1,79 @@
+---
+layout: null
+---
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Start Page</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="start.css">
-    <link rel="stylesheet" type="text/css" href="spritesheet.css">
+    <style scoped>
+        {% include start.css %}
+    </style>
 </head>
 <body>
-    <div id="toolbar">
-        <a id="darkmode" onclick="toggleDarkMode()"><div class="link darkmode"></div></a>
+
+    <div id="logo">
+        {% include images/logo.svg %}
     </div>
-    <div class="wrapper">
-        <img src="logo.png" width="630px" height="200px"/>
-        <div class="search-box">
-            <form method="get" class="search-form ggl" action="https://www.google.com/search" name="search" style="display:none">
-                <input id="ggl-searchbox" type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" autofocus/>
-                <button class="search-button" type="submit"><div class="link search"></div></button>
-                <input type="hidden" name="ie" value="UTF-8" />
-                <input type="hidden" name="sa" value="Search" />
-                <input type="hidden" name="channel" value="fe">
-                <input type="hidden" name="client" value="browser-ubuntu">
-                <input title="search" type="hidden" name="hl" value="en" />
-            </form>
-            <form class="ddg" action="https://duckduckgo.com/" style="display:none">
-              <input id="ddg-searchbox" type="search" class="search-input" name="q" autofocus/>
-              <button class="search-button" type="submit"><div class="link search"></div></button>
-            </form>
-            <div id="engines">
-                <label><input id="ggl" name="engine" type="radio" onclick="setSearch('ggl')"/> <div class="link google"></div></label>
-                <label><input id="ddg" name="engine" type="radio" onclick="setSearch('ddg')"/> <div class="link duckduckgo"></div></label>
+
+    <div class="search-box">
+
+        <!-- Google -->
+        <form method="get" class="search-form google no-js-fallback" action="https://www.google.com/search" name="search" style="display:none">
+            <input id="google-searchbox" type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" autofocus />
+            <button class="search-button" type="submit">{% include images/search.svg %}</button>
+            <input type="hidden" name="ie" value="UTF-8" />
+            <input type="hidden" name="sa" value="Search" />
+            <input type="hidden" name="channel" value="fe">
+            <input type="hidden" name="client" value="browser-ubuntu">
+            <input title="search" type="hidden" name="hl" value="en" />
+        </form>
+
+        <!-- DuckDuckGo -->
+        <form class="duckduckgo" action="https://duckduckgo.com/" style="display:none">
+          <input id="duckduckgo-searchbox" type="search" class="search-input" name="q" autofocus />
+          <button class="search-button" type="submit">{% include images/search.svg %}</button>
+        </form>
+
+        <div id="current-engine">
+            <div id="powered-by">Powered by</div>
+
+            <div id="google" class="no-js-fallback" onclick="setSearch('google')" style="display:none">
+                {% include brands/google.svg %}
+            </div>
+            <div id="duckduckgo" onclick="setSearch('duckduckgo')" style="display:none">
+                {% include brands/duckduckgo.svg %}
             </div>
         </div>
     </div>
-    <div class="link-box">
-        <a id="link-about" href="https://ubuntu-mate.org"><div class="link about"></div></a>
-        <a id="link-community" href="https://ubuntu-mate.community"><div class="link community"></div></a>
-        <a id="link-shop" href="https://ubuntu-mate.boutique"><div class="link shop"></div></a>
-        <a id="link-chat" href="https://ubuntu-mate.org/irc/"><div class="link chat"></div></a>
-        <a id="link-donate" href="https://ubuntu-mate.org/donate/"><div class="link donate"></div></a>
+
+    <div class="links">
+        <a href="https://ubuntu-mate.org">{% include images/desktop.svg %}<span>Discover</span></a>
+        <a href="https://ubuntu-mate.community">{% include images/comments.svg %}<span>Community</span></a>
+        <a href="https://ubuntu-mate.org/shop/">{% include images/shopping-bag.svg %}<span>Emporium</span></a>
+        <a href="https://ubuntu-mate.org/funding/">{% include images/heart.svg %}<span>Funding</span></a>
     </div>
-    <script src="locale.js"></script>
-    <script src="start.js"></script>
+
+    <script>
+
+        var LOCALES = {
+            {% for locale in site.data.locales %}
+                "{{ locale }}": {% include i18n/{{ locale }}.json %}
+                {% if forloop.last == false %},{% endif %}
+            {% endfor %}
+        }
+
+        {% include start.js %}
+    </script>
+
+    <noscript>
+        <style>
+            .no-js-fallback {
+                display: block !important;
+            }
+        </style>
+    </noscript>
 </body>
 </html>
