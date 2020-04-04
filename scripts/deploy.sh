@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-if [ -f _site/index.html ]; then
-    for HOST in man yor; do
-        echo "Deploying to: ${HOST}"
-        rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete _site/ matey@${HOST}.ubuntu-mate.net:start.ubuntu-mate.org/
-    done
-else
-    echo "ERROR! index.html was not found."
+if [ ! -f _site/index.html ]; then
+    echo "Deployment aborted. index.html appears to be missing?"
     exit 1
 fi
+
+rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete _site/ matey@man.ubuntu-mate.net:start.ubuntu-mate.org/
+rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete _site/ matey@yor.ubuntu-mate.net:start.ubuntu-mate.org/
+
+echo "Running post-deploy actions..."
+ssh -o StrictHostKeyChecking=no matey@yor.ubuntu-mate.net /home/matey/post-deploy-actions.sh "start.ubuntu-mate.org"
