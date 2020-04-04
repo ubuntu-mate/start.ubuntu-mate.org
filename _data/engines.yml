@@ -1,6 +1,7 @@
 engines:
     - google
     - duckduckgo
+    - bing
 
 config:
     google:
@@ -28,6 +29,13 @@ config:
     duckduckgo:
         method: "post"
         action: "https://duckduckgo.com/"
+        name: "search"
+        input_name: "q"
+        #fields:
+
+    bing:
+        method: "get"
+        action: "https://www.bing.com/search"
         name: "search"
         input_name: "q"
         #fields:
