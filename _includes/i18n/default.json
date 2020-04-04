@@ -2,7 +2,10 @@
     "discover": "Discover",
     "community": "Community",
     "shop": "Emporium",
-    "donate": "Funding",
-    "searchbox": "Search the web",
-    "settings": "Preferences"
+    "funding": "Funding",
+    "placeholder": "Search the web",
+    "powered_by": "Powered by",
+    "search": "Search!",
+    "settings": "Preferences",
+    "prefer_engine": "Preferred Search Engine"
 }

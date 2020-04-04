@@ -1,4 +1,16 @@
 /*********************
+ * Colours
+*********************/
+:root {
+    --accent-color: #87A556;
+    --border-color: #E6E6E6;
+    --background-color: #F4F4F4;
+    --background-alt: white;
+    --grey-color: #999999;
+    --text-color: black;
+}
+
+/*********************
  * Main
 *********************/
 body, * {
@@ -7,6 +19,8 @@ body, * {
 
 body {
     display: flex;
+    background-color: var(--background-color);
+    color: var(--text-color);
     height: 95vh;
     flex-direction: column;
     -webkit-user-select: none;
@@ -41,15 +55,15 @@ body {
 .search-input {
     width: 380px;
     height: 35px;
-    border: 1px solid #E6E6E6;
+    border: 1px solid var(--border-color);
     font-size: 16px;
     text-indent: 6px;
     vertical-align: middle;
 }
 
 .search-button {
-    border: 1px solid #E6E6E6;
-    background-color: #87a556;
+    border: 1px solid var(--border-color);
+    background-color: var(--accent-color);
     color: white;
     height: 35px;
     width: 48px;
@@ -81,15 +95,13 @@ body {
     font-size: 14px;
 }
 
-#current-engine #powered-by {
-    max-height: 30px;
-    max-width: 200px;
+#current-engine #str-powered-by {
     margin: 0 0 auto 0;
     opacity: 0.5;
 }
 
 #current-engine svg {
-    max-height: 20px;
+    height: 20px;
     max-width: 200px;
     margin: 0 5px;
 }
@@ -107,14 +119,20 @@ body {
     display: inline-block;
     margin: 16px;
     text-decoration: initial;
-    color: gray;
-    filter: grayscale(100%);
+    color: var(--grey-color);
+}
+
+.links > a svg path {
+    fill: var(--grey-color);
 }
 
 .links > a:hover {
     opacity: 0.7;
-    color: #87A556;
-    filter: grayscale(0);
+    color: var(--accent-color);
+}
+
+.links > a:hover svg path {
+    fill: var(--accent-color);
 }
 
 .links svg {
@@ -125,7 +143,7 @@ body {
 }
 
 .links svg path {
-    fill: #87a556;
+    fill: var(--accent-color);
 }
 
 .links span {
@@ -139,25 +157,130 @@ body {
  * Dark Mode
 *********************/
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #3C3A36;
-        color: #fff;
+    :root {
+        --accent-color: #87A556;
+        --border-color: #E6E6E6;
+        --background-color: #3C3A36;
+        --background-alt: #222;
+        --grey-color: #999999;
+        --text-color: white;
     }
 
     body input {
-        background-color: #000;
-        color: #fff;
-    }
-
-    body .link-box > a {
-        filter: grayscale(100%) invert(1);
-    }
-
-    body .link-box > a:hover {
-        filter: grayscale(0);
+        background-color: black;
+        color: var(--text-color);
     }
 
     #logo svg {
         box-shadow: 0px 0px 10px 0px black;
     }
+}
+
+/*********************
+ * Preferences
+*********************/
+#pref-menu-toggle {
+    display: none;
+    appearance: none;
+}
+
+#pref-menu-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#pref-menu-icon:hover svg path,
+#pref-menu-icon:focus svg path {
+    fill: var(--accent-color);
+}
+
+#pref-menu-icon svg path,
+#pref-menu-toggle:checked + #pref-menu-icon svg path {
+    fill: var(--grey-color);
+}
+
+#pref-menu {
+    position: fixed;
+    top: 55px;
+    right: 10px;
+    background: var(--background-alt);
+    box-shadow: 0 8px 14px rgba(0,0,0,0.15);
+    font-size: 14px;
+    padding: 8px 16px;
+    min-width: 150px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top right;
+    visibility: hidden;
+    transition-property: opacity, transform, visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+#pref-menu-toggle:checked + #pref-menu-icon {
+    background: var(--background-alt);
+}
+
+#pref-menu-toggle:checked + #pref-menu-icon + #pref-menu {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+
+/* Items inside dropdown menu */
+.no-js-alert {
+    background: #A80000;
+    color: white;
+    display: flex;
+    padding: 10px;
+    max-width: 250px;
+}
+
+.no-js-alert svg {
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+.no-js-alert span {
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.no-js-alert svg path {
+    fill: white;
+}
+
+#pref-menu h4 {
+    font-weight: normal;
+    margin: 10px 0;
+    opacity: 0.5;
+}
+
+.engine-choice {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    padding-right: 10px;
+}
+
+.engine-choice svg {
+    height: 22px;
+    max-width: 200px;
+}
+
+.engine-choice.active::after {
+    content: "●";
+    color: var(--grey-color);
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    line-height: 20px;
 }

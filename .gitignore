@@ -4,5 +4,5 @@
 
 # Output
 _site/
-i18n/*.json
-!i18n/en.json
+_includes/i18n/*.json
+!_includes/i18n/default.json

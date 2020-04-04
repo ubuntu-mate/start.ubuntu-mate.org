@@ -1,0 +1,33 @@
+engines:
+    - google
+    - duckduckgo
+
+config:
+    google:
+        method: "get"
+        action: "https://www.google.com/search"
+        name: "search"
+        input_name: "q"
+        fields:
+            - type: "hidden"
+              name: "ie"
+              value: "UTF-8"
+
+            - type: "hidden"
+              name: "sa"
+              value: "Search"
+
+            - type: "hidden"
+              name: "channel"
+              value: "fe"
+
+            - type: "hidden"
+              name: "client"
+              value: "browser-ubuntu"
+
+    duckduckgo:
+        method: "post"
+        action: "https://duckduckgo.com/"
+        name: "search"
+        input_name: "q"
+        #fields:

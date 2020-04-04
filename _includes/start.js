@@ -1,75 +1,110 @@
-/******************************************************
- * Code for storing/processing settings for this page
-******************************************************/
-/* Defaults */
-if (localStorage.getItem("search") === null) {
-    localStorage.setItem("search", "google");
+/*********************
+ * Common
+*********************/
+function hide(class_name) {
+    var items = document.getElementsByClassName(class_name);
+    for (i = 0; i < items.length; i++) {
+        items[i].style.display = "none";
+    }
 }
 
-/* Common */
-function hide(div) {
-    document.getElementsByClassName(div)[0].style.display = 'none';
+function show(class_name) {
+    var items = document.getElementsByClassName(class_name);
+    for (i = 0; i < items.length; i++) {
+        items[i].style.display = "initial";
+    }
 }
 
-function show(div) {
-    document.getElementsByClassName(div)[0].style.display = 'initial';
+function removeClass(class_name, class_to_remove) {
+    var items = document.getElementsByClassName(class_name);
+    for (i = 0; i < items.length; i++) {
+        items[i].classList.remove(class_to_remove);
+    }
 }
 
-function setText(div, text) {
-    document.getElementById(div).innerHTML = text;
+function addClass(id, class_to_add) {
+    document.getElementById(id).classList.add(class_to_add);
 }
 
-function appendText(div, text) {
-    document.getElementById(div).append(text);
+function setText(id, text) {
+    document.getElementById(id).innerHTML = text;
+}
+
+function setTitle(id, text) {
+    document.getElementById(id).title = text;
+}
+
+function setTitles(class_name, text) {
+    var items = document.getElementsByClassName(class_name);
+    for (i = 0; i < items.length; i++) {
+        items[i].title = text;
+    }
+}
+
+function setPlaceholders(class_name, text) {
+    var items = document.getElementsByClassName(class_name);
+    for (i = 0; i < items.length; i++) {
+        items[i].placeholder = text;
+    }
 }
 
 /*********************
  * Locales
 *********************/
-function setLocale() {
+function setup_locales() {
     var locale = navigator.language;
-    if (! locales.hasOwnProperty(locale)) {
+    var strings = {};
+
+    // Try full locale (e.g. fr_CA)
+    if (LOCALES.hasOwnProperty(locale)) {
+        strings = LOCALES[locale];
+    } else {
+        // Try the language only (e.g. fr)
         locale = locale.substring(0,2);
-        if (! locales.hasOwnProperty(locale)) {
+        if (LOCALES.hasOwnProperty(locale)) {
+            strings = LOCALES[locale];
+        } else {
             locale = "en";
+            strings = LOCALES["default"];
         }
     }
-    var localeDict = locales[locale];
-    appendText("link-about", localeDict.discover);
-    appendText("link-community", localeDict.community);
-    appendText("link-shop", localeDict.shop);
-    appendText("link-chat", localeDict.chat);
-    appendText("link-donate", localeDict.donate);
-    document.getElementById("google-searchbox").placeholder = localeDict.searchbox;
-    document.getElementById("duckduckgo-searchbox").placeholder = localeDict.searchbox;
-    document.getElementById("darkmode").title = localeDict.darkmode;
+
+    setText("str-discover", strings.discover);
+    setText("str-community", strings.community);
+    setText("str-shop", strings.shop);
+    setText("str-funding", strings.funding);
+    setText("str-prefer-engine", strings.prefer_engine);
+    setText("str-powered-by", strings.powered_by);
+    setTitle("pref-menu-icon", strings.settings);
+    setTitles("search-button", strings.search);
+    setPlaceholders("search-input", strings.placeholder);
 }
 
 /***************************
  * Preferred Search Engine
 **************************/
-function setSearch(engine) {
-    localStorage.setItem("search", engine);
-    getSearch();
+function set_default(engine) {
+    localStorage.setItem("preferredEngine", engine);
+    setup_search();
+    removeClass("engine-choice", "active")
+    addClass("option-" + engine, "active");
 }
 
-function getSearch() {
-    engine = localStorage.getItem("search");
-    hide("google");
-    hide("duckduckgo");
-    if ( engine == "duckduckgo" ) {
-        show("duckduckgo");
-        document.getElementById("duckduckgo").style = "";
-        document.getElementById("duckduckgo-searchbox").focus();
-    } else {
-        show("google");
-        document.getElementById("google").style = "";
-        document.getElementById("google-searchbox").focus();
+function setup_search() {
+    engine = localStorage.getItem("preferredEngine");
+    if (engine == null) {
+        engine = "google";
+        localStorage.setItem("preferredEngine", engine);
     }
+    hide("search-form");
+    hide("search-logo");
+    show(engine);
+    addClass("option-" + engine, "active");
+    document.getElementById(engine + "-search-button").focus();
 }
 
 /*********************
  * On page load
 *********************/
-getSearch();
-setLocale();
+setup_search();
+setup_locales();

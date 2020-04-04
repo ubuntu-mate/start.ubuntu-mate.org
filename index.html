@@ -20,40 +20,72 @@ layout: null
 
     <div class="search-box">
 
-        <!-- Google -->
-        <form method="get" class="search-form google no-js-fallback" action="https://www.google.com/search" name="search" style="display:none">
-            <input id="google-searchbox" type="search" class="search-input" name="q" value="" x-webkit-speech id="sbi" autofocus />
-            <button class="search-button" type="submit">{% include images/search.svg %}</button>
-            <input type="hidden" name="ie" value="UTF-8" />
-            <input type="hidden" name="sa" value="Search" />
-            <input type="hidden" name="channel" value="fe">
-            <input type="hidden" name="client" value="browser-ubuntu">
-            <input title="search" type="hidden" name="hl" value="en" />
-        </form>
-
-        <!-- DuckDuckGo -->
-        <form class="duckduckgo" action="https://duckduckgo.com/" style="display:none">
-          <input id="duckduckgo-searchbox" type="search" class="search-input" name="q" autofocus />
-          <button class="search-button" type="submit">{% include images/search.svg %}</button>
-        </form>
+        {% for engine in site.data.engines.engines %}
+            {% assign config = site.data.engines.config[engine] %}
+            <form method="{{ config.method }}" class="search-form {{ engine }}" action="{{ config.action }}" name="search" style="display:none">
+                <input id="{{ engine }}-search-button" class="search-input" type="search" name="q" value="" x-webkit-speech placeholder="Search the web" autofocus />
+                {% for field in config.fields %}
+                <input type="{{ field.type }}" name="{{ field.name }}" value="{{ field.value }}" />
+                {% endfor %}
+                <button class="search-button" type="submit" title="Search!">{% include images/search.svg %}</button>
+            </form>
+        {% endfor %}
 
         <div id="current-engine">
-            <div id="powered-by">Powered by</div>
+            <div id="str-powered-by">Powered by</div>
 
-            <div id="google" class="no-js-fallback" onclick="setSearch('google')" style="display:none">
-                {% include brands/google.svg %}
-            </div>
-            <div id="duckduckgo" onclick="setSearch('duckduckgo')" style="display:none">
-                {% include brands/duckduckgo.svg %}
-            </div>
+            {% for engine in site.data.engines.engines %}
+                <div class="search-logo {{ engine }}" onclick="setSearch('{{ engine }}')" style="display:none">
+                    {% include brands/{{ engine }}.svg %}
+                </div>
+            {% endfor %}
+
         </div>
     </div>
 
+    <!-- Preferences -->
+    <input id="pref-menu-toggle" type="checkbox"/>
+    <label id="pref-menu-icon" for="pref-menu-toggle" title="Preferences">
+        {% include images/wrench.svg %}
+    </label>
+    <div id="pref-menu">
+        <noscript>
+            <p class="no-js-alert">
+                {% include images/warning.svg %}
+                <span>JavaScript must be enabled to change preferences.</span>
+            </p>
+            <style>
+                .engine-choice {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            </style>
+        </noscript>
+        <h4 id="str-prefer-engine">Preferred Search Engine</h4>
+        {% for engine in site.data.engines.engines %}
+            <a id="option-{{ engine }}" class="engine-choice" onclick="set_default('{{ engine }}')">
+                {% include brands/{{ engine }}.svg %}
+            </a>
+        {% endfor %}
+    </div>
+
     <div class="links">
-        <a href="https://ubuntu-mate.org">{% include images/desktop.svg %}<span>Discover</span></a>
-        <a href="https://ubuntu-mate.community">{% include images/comments.svg %}<span>Community</span></a>
-        <a href="https://ubuntu-mate.org/shop/">{% include images/shopping-bag.svg %}<span>Emporium</span></a>
-        <a href="https://ubuntu-mate.org/funding/">{% include images/heart.svg %}<span>Funding</span></a>
+        <a href="https://ubuntu-mate.org">
+            {% include images/desktop.svg %}
+            <span id="str-discover">Discover</span>
+        </a>
+        <a href="https://ubuntu-mate.community">
+            {% include images/comments.svg %}
+            <span id="str-community">Community</span>
+        </a>
+        <a href="https://ubuntu-mate.org/shop/">
+            {% include images/shopping-bag.svg %}
+            <span id="str-shop">Emporium</span>
+        </a>
+        <a href="https://ubuntu-mate.org/funding/">
+            {% include images/heart.svg %}
+            <span id="str-funding">Funding</span>
+        </a>
     </div>
 
     <script>
@@ -70,7 +102,7 @@ layout: null
 
     <noscript>
         <style>
-            .no-js-fallback {
+            .google {
                 display: block !important;
             }
         </style>
