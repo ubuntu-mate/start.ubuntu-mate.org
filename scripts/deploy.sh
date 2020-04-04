@@ -3,7 +3,7 @@
 if [ -f _site/index.html ]; then
     for HOST in man yor; do
         echo "Deploying to: ${HOST}"
-        rsync -a -e "ssh -o StrictHostKeyChecking=no" --progress --delete _site/ matey@${HOST}.ubuntu-mate.net:start.ubuntu-mate.org/
+        rsync -a -e "ssh -o StrictHostKeyChecking=no" --delete _site/ matey@${HOST}.ubuntu-mate.net:start.ubuntu-mate.org/
     done
 else
     echo "ERROR! index.html was not found."
