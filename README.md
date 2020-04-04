@@ -1,5 +1,7 @@
 # [start.ubuntu-mate.org](https://start.ubuntu-mate.org)
 
+![CI](https://github.com/ubuntu-mate/start.ubuntu-mate.org/workflows/CI/badge.svg)
+
 A personalised start page for Ubuntu MATE users on Firefox.
 
 ![Screenshot - April 2020](.github/preview.png)
