@@ -11,6 +11,7 @@ engines:
 
 config:
     google:
+        placeholder_string: "web"
         method: "get"
         action: "https://www.google.com/search"
         name: "search"
@@ -33,6 +34,7 @@ config:
               value: "browser-ubuntu"
 
     duckduckgo:
+        placeholder_string: "web"
         method: "post"
         action: "https://duckduckgo.com/"
         name: "search"
@@ -40,6 +42,7 @@ config:
         #fields:
 
     bing:
+        placeholder_string: "web"
         method: "get"
         action: "https://www.bing.com/search"
         name: "search"
@@ -47,6 +50,7 @@ config:
         #fields:
 
     yahoo:
+        placeholder_string: "web"
         method: "get"
         action: "https://search.yahoo.com/search"
         name: "search"
@@ -54,6 +58,7 @@ config:
         #fields:
 
     ecosia:
+        placeholder_string: "web"
         method: "get"
         action: "https://www.ecosia.org/search"
         name: "search"
@@ -61,6 +66,7 @@ config:
         #fields:
 
     youtube:
+        placeholder_string: "videos"
         method: "get"
         action: "https://www.youtube.com/results"
         name: "search"
@@ -68,6 +74,7 @@ config:
         #fields:
 
     internetarchive:
+        placeholder_string: "archive"
         method: "get"
         action: "https://archive.org/searchresults.php"
         name: ""
@@ -75,6 +82,7 @@ config:
         #fields:
 
     askubuntu:
+        placeholder_string: "answers"
         method: "get"
         action: "https://askubuntu.com/search"
         name: "search"
@@ -82,6 +90,7 @@ config:
         #fields:
 
     ubuntumatecommunity:
+        placeholder_string: "discussions"
         method: "get"
         action: "https://ubuntu-mate.community/search"
         name: "search"

@@ -89,7 +89,6 @@ layout: null
     </div>
 
     <script>
-
         var LOCALES = {
             {% for locale in site.data.locales %}
                 "{{ locale }}": {% include i18n/{{ locale }}.json %}
@@ -97,7 +96,15 @@ layout: null
             {% endfor %}
         }
 
+        var PLACEHOLDERS = {
+            {% for engine in site.data.engines.engines %}
+                "{{ engine }}": "{{ site.data.engines.config[engine].placeholder_string }}"
+                {% if forloop.last == false %},{% endif %}
+            {% endfor %}
+        }
+
         {% include start.js %}
+
     </script>
 
     <noscript>

@@ -3,9 +3,13 @@
     "community": "Community",
     "shop": "Emporium",
     "funding": "Funding",
-    "placeholder": "Search the web",
     "powered_by": "Powered by",
     "search": "Search!",
     "settings": "Preferences",
-    "prefer_engine": "Preferred Search Engine"
+    "prefer_engine": "Preferred Search Engine",
+    "placeholder_web": "Search the web",
+    "placeholder_videos": "Search for videos",
+    "placeholder_archive": "Search the Internet Archive",
+    "placeholder_answers": "Search for answers",
+    "placeholder_discussions": "Search for discussions"
 }

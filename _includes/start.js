@@ -51,33 +51,33 @@ function setPlaceholders(class_name, text) {
 /*********************
  * Locales
 *********************/
+var STRINGS = {};
 function setup_locales() {
     var locale = navigator.language;
-    var strings = {};
 
     // Try full locale (e.g. fr_CA)
     if (LOCALES.hasOwnProperty(locale)) {
-        strings = LOCALES[locale];
+        STRINGS = LOCALES[locale];
     } else {
         // Try the language only (e.g. fr)
         locale = locale.substring(0,2);
         if (LOCALES.hasOwnProperty(locale)) {
-            strings = LOCALES[locale];
+            STRINGS = LOCALES[locale];
         } else {
             locale = "en";
-            strings = LOCALES["default"];
+            STRINGS = LOCALES["default"];
         }
     }
 
-    setText("str-discover", strings.discover);
-    setText("str-community", strings.community);
-    setText("str-shop", strings.shop);
-    setText("str-funding", strings.funding);
-    setText("str-prefer-engine", strings.prefer_engine);
-    setText("str-powered-by", strings.powered_by);
-    setTitle("pref-menu-icon", strings.settings);
-    setTitles("search-button", strings.search);
-    setPlaceholders("search-input", strings.placeholder);
+    setText("str-discover", STRINGS.discover);
+    setText("str-community", STRINGS.community);
+    setText("str-shop", STRINGS.shop);
+    setText("str-funding", STRINGS.funding);
+    setText("str-prefer-engine", STRINGS.prefer_engine);
+    setText("str-powered-by", STRINGS.powered_by);
+    setTitle("pref-menu-icon", STRINGS.settings);
+    setTitles("search-button", STRINGS.search);
+    setPlaceholders("search-input", STRINGS["placeholder_" + PLACEHOLDERS[engine]]);
 }
 
 /***************************
@@ -88,6 +88,7 @@ function set_default(engine) {
     setup_search();
     removeClass("engine-choice", "active")
     addClass("option-" + engine, "active");
+    setPlaceholders("search-input", STRINGS["placeholder_" + PLACEHOLDERS[engine]]);
     document.getElementById("pref-menu-toggle").checked = false;
     document.getElementById(engine + "-search-input").focus();
 }
