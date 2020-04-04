@@ -2,6 +2,7 @@ engines:
     - google
     - duckduckgo
     - bing
+    - yahoo
 
 config:
     google:
@@ -36,6 +37,13 @@ config:
     bing:
         method: "get"
         action: "https://www.bing.com/search"
+        name: "search"
+        input_name: "q"
+        #fields:
+
+    yahoo:
+        method: "get"
+        action: "https://search.yahoo.com/search"
         name: "search"
         input_name: "q"
         #fields:
