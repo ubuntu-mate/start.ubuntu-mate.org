@@ -3,6 +3,7 @@ engines:
     - duckduckgo
     - bing
     - yahoo
+    - ecosia
 
 config:
     google:
@@ -44,6 +45,13 @@ config:
     yahoo:
         method: "get"
         action: "https://search.yahoo.com/search"
+        name: "search"
+        input_name: "q"
+        #fields:
+
+    ecosia:
+        method: "get"
+        action: "https://www.ecosia.org/search"
         name: "search"
         input_name: "q"
         #fields:
