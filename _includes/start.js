@@ -106,5 +106,13 @@ function setup_search() {
 /*********************
  * On page load
 *********************/
+/* Migrate from older config (before Apr 2020) */
+if (localStorage.getItem("search") != null) {
+    if (localStorage.getItem("search") == "ddg") {
+        localStorage.setItem("preferredEngine", "duckduckgo");
+    }
+    localStorage.removeItem("search");
+}
+
 setup_search();
 setup_locales();
