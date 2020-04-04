@@ -6,6 +6,7 @@ engines:
     - ecosia
     - youtube
     - internetarchive
+    - askubuntu
     - ubuntumatecommunity
 
 config:
@@ -71,6 +72,13 @@ config:
         action: "https://archive.org/searchresults.php"
         name: ""
         input_name: "search"
+        #fields:
+
+    askubuntu:
+        method: "get"
+        action: "https://askubuntu.com/search"
+        name: "search"
+        input_name: "q"
         #fields:
 
     ubuntumatecommunity:
