@@ -5,6 +5,7 @@ engines:
     - yahoo
     - ecosia
     - youtube
+    - internetarchive
 
 config:
     google:
@@ -62,4 +63,11 @@ config:
         action: "https://www.youtube.com/results"
         name: "search"
         input_name: "search_query"
+        #fields:
+
+    internetarchive:
+        method: "get"
+        action: "https://archive.org/searchresults.php"
+        name: ""
+        input_name: "search"
         #fields:
