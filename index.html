@@ -23,7 +23,7 @@ layout: null
         {% for engine in site.data.engines.engines %}
             {% assign config = site.data.engines.config[engine] %}
             <form method="{{ config.method }}" class="search-form {{ engine }}" action="{{ config.action }}" name="{{ config.name }}" style="display:none">
-                <input id="{{ engine }}-search-button" class="search-input" type="search" name="{{ config.input_name }}" value="" x-webkit-speech placeholder="Search the web" autofocus />
+                <input id="{{ engine }}-search-input" class="search-input" type="search" name="{{ config.input_name }}" value="" x-webkit-speech placeholder="Search the web" autofocus />
                 {% for field in config.fields %}
                 <input type="{{ field.type }}" name="{{ field.name }}" value="{{ field.value }}" />
                 {% endfor %}

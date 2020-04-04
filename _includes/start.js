@@ -88,6 +88,8 @@ function set_default(engine) {
     setup_search();
     removeClass("engine-choice", "active")
     addClass("option-" + engine, "active");
+    document.getElementById("pref-menu-toggle").checked = false;
+    document.getElementById(engine + "-search-input").focus();
 }
 
 function setup_search() {
@@ -100,7 +102,7 @@ function setup_search() {
     hide("search-logo");
     show(engine);
     addClass("option-" + engine, "active");
-    document.getElementById(engine + "-search-button").focus();
+    document.getElementById(engine + "-search-input").focus();
 }
 
 /*********************
