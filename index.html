@@ -22,8 +22,8 @@ layout: null
 
         {% for engine in site.data.engines.engines %}
             {% assign config = site.data.engines.config[engine] %}
-            <form method="{{ config.method }}" class="search-form {{ engine }}" action="{{ config.action }}" name="search" style="display:none">
-                <input id="{{ engine }}-search-button" class="search-input" type="search" name="q" value="" x-webkit-speech placeholder="Search the web" autofocus />
+            <form method="{{ config.method }}" class="search-form {{ engine }}" action="{{ config.action }}" name="{{ config.name }}" style="display:none">
+                <input id="{{ engine }}-search-button" class="search-input" type="search" name="{{ config.input_name }}" value="" x-webkit-speech placeholder="Search the web" autofocus />
                 {% for field in config.fields %}
                 <input type="{{ field.type }}" name="{{ field.name }}" value="{{ field.value }}" />
                 {% endfor %}
@@ -35,7 +35,7 @@ layout: null
             <div id="str-powered-by">Powered by</div>
 
             {% for engine in site.data.engines.engines %}
-                <div class="search-logo {{ engine }}" onclick="setSearch('{{ engine }}')" style="display:none">
+                <div class="search-logo {{ engine }}" style="display:none">
                     {% include brands/{{ engine }}.svg %}
                 </div>
             {% endfor %}
