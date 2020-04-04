@@ -27,7 +27,7 @@ jobs:
         scripts/build.sh
 
     - name: Deploy to server
-      if: github.event_name == 'push' && github.ref == 'master'
+      if: github.event_name == 'push'
       run: |
         mkdir -p $HOME/.ssh/
         chmod 700 $HOME/.ssh/
