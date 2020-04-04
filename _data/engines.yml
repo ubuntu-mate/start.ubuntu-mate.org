@@ -4,6 +4,7 @@ engines:
     - bing
     - yahoo
     - ecosia
+    - youtube
 
 config:
     google:
@@ -54,4 +55,11 @@ config:
         action: "https://www.ecosia.org/search"
         name: "search"
         input_name: "q"
+        #fields:
+
+    youtube:
+        method: "get"
+        action: "https://www.youtube.com/results"
+        name: "search"
+        input_name: "search_query"
         #fields:
