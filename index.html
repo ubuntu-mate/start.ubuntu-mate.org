@@ -8,9 +8,15 @@ layout: null
     <meta name="viewport" content="width=device-width">
     <title>Start Page</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <style scoped>
+    <style>
         {% include start.css %}
     </style>
+    <script>
+        // For browsers that do not support dark mode via CSS.
+        if (localStorage.getItem("dark") == true) {
+            document.body.classList.add("dark");
+        }
+    </script>
 </head>
 <body>
 
@@ -55,7 +61,7 @@ layout: null
                 <span>JavaScript must be enabled to change preferences.</span>
             </p>
             <style>
-                .engine-choice {
+                .requires-js {
                     opacity: 0.5;
                     cursor: not-allowed;
                 }
@@ -63,10 +69,14 @@ layout: null
         </noscript>
         <h4 id="str-prefer-engine">Preferred Search Engine</h4>
         {% for engine in site.data.engines.engines %}
-            <a id="option-{{ engine }}" class="engine-choice" onclick="set_default('{{ engine }}')">
+            <a id="option-{{ engine }}" class="engine-choice requires-js" onclick="set_default('{{ engine }}')">
                 {% include brands/{{ engine }}.svg %}
             </a>
         {% endfor %}
+
+        <h4 id="str-appearance">Appearance</h4>
+        <input id="dark-mode" type="checkbox" class="requires-js"/>
+        <label id="str-dark-mode" for="dark-mode" class="requires-js">Force dark mode</label>
     </div>
 
     <div class="links">

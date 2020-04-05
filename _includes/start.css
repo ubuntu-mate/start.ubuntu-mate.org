@@ -179,6 +179,41 @@ body {
     #option-internetarchive svg {
         filter: invert(1);
     }
+
+}
+
+/* This isn't SCSS so repeat for bog standard "dark" class */
+/* The server compresses the data in transit (HTTPS/2) anyway */
+.dark {
+    --accent-color: #87A556;
+    --border-color: #E6E6E6;
+    --background-color: #3C3A36;
+    --background-alt: #222;
+    --grey-color: #999999;
+    --text-color: white;
+}
+
+.dark input {
+    background-color: black;
+    color: var(--text-color);
+}
+
+.dark #logo svg {
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.dark .internetarchive svg,
+.dark #option-internetarchive svg {
+    filter: invert(1);
+}
+
+/* Hide dark mode toggle when natively supported */
+@media (prefers-color-scheme: dark) {
+    #dark-mode,
+    #str-dark-mode,
+    #str-appearance {
+        display: none;
+    }
 }
 
 /*********************
@@ -288,4 +323,9 @@ body {
     right: 0;
     font-size: 20px;
     line-height: 20px;
+}
+
+#pref-menu input[type=checkbox],
+#pref-menu label {
+    vertical-align: middle;
 }

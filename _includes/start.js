@@ -78,6 +78,8 @@ function setup_locales() {
     setTitle("pref-menu-icon", STRINGS.settings);
     setTitles("search-button", STRINGS.search);
     setPlaceholders("search-input", STRINGS["placeholder_" + PLACEHOLDERS[engine]]);
+    setText("str-appearance", STRINGS.appearance);
+    setText("str-dark-mode", STRINGS.dark_mode);
 }
 
 /***************************
@@ -106,6 +108,27 @@ function setup_search() {
     document.getElementById(engine + "-search-input").focus();
 }
 
+/***************************
+ * Force dark mode (for browsers that can't set it automatically)
+**************************/
+document.addEventListener("change", function(e) {
+    if (document.getElementById("dark-mode").checked === true) {
+        localStorage.setItem("dark", "true")
+        document.body.classList.add("dark");
+    } else {
+        localStorage.setItem("dark", "false")
+        document.body.classList.remove("dark");
+    }
+});
+
+function setup_appearance() {
+    if (localStorage.getItem("dark") === "true") {
+        document.getElementById("dark-mode").checked = true;
+        document.body.classList.add("dark");
+    }
+}
+
+
 /*********************
  * On page load
 *********************/
@@ -119,3 +142,4 @@ if (localStorage.getItem("search") != null) {
 
 setup_search();
 setup_locales();
+setup_appearance();
