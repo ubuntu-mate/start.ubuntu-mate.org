@@ -226,6 +226,16 @@ body {
     transform-origin: top left;
 }
 
+.rtl .engine-choice {
+    padding-left: unset;
+    padding-right: 20px;
+}
+
+.rtl .engine-choice.active::after {
+    left: unset;
+    right: 0;
+}
+
 /*********************
  * Preferences
 *********************/
@@ -318,7 +328,7 @@ body {
     cursor: pointer;
     position: relative;
     padding: 5px 0;
-    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .engine-choice svg {
@@ -330,7 +340,7 @@ body {
     content: "●";
     color: var(--grey-color);
     position: absolute;
-    right: 0;
+    left: 0;
     font-size: 20px;
     line-height: 20px;
 }
