@@ -149,7 +149,7 @@ body {
 .links span {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 10px;
+    margin-left: 10px;
 }
 
 
@@ -224,6 +224,11 @@ body {
     left: 10px;
     right: unset;
     transform-origin: top left;
+}
+
+.rtl .links span {
+    margin-left: unset;
+    margin-right: 10px;
 }
 
 .rtl .engine-choice {
