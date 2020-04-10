@@ -7,7 +7,38 @@ layout: null
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Start Page</title>
-    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | escape }}{% else %}{{ site.keywords | escape }}{% endif %}">
+    <meta name="author" content="Ubuntu MATE Team">
+
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description | strip }}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/favicon/preview.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ubuntu_mate">
+    <meta name="twitter:creator" content="@ubuntu_mate">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+    <link rel="manifest" href="/favicon/manifest.json">
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <meta name="application-name" content="Ubuntu MATE"/>
+    <meta name="msapplication-TileColor" content="#87A556"/>
+    <meta name="msapplication-TileImage" content="/favicon/144x144.png">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+
+    {% assign favicons = "16,32,64,96,144,196,256" | split: "," %}
+    {% for icon in favicons %}
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon/{{ icon }}x{{ icon }}.png">
+    <link rel="apple-touch-icon" sizes="{{ icon }}x{{ icon }}" href="/favicon/{{ icon }}x{{ icon }}.png">
+    {% endfor %}
+
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
     <style>
         {% include start.css %}
     </style>
