@@ -149,7 +149,7 @@ body {
 .links span {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 
@@ -214,6 +214,16 @@ body {
     #str-appearance {
         display: none;
     }
+}
+
+/*********************
+ * RTL tweaks
+*********************/
+.rtl #pref-menu-icon,
+.rtl #pref-menu {
+    left: 10px;
+    right: unset;
+    transform-origin: top left;
 }
 
 /*********************

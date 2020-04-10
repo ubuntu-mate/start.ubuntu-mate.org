@@ -69,6 +69,16 @@ function setup_locales() {
         }
     }
 
+    // Enforce RTL if locale requires this.
+    var rtl_langs = ["ar", "arc", "dv", "fa", "ha", "he", "khw", "ks", "ku", "ps", "ur", "yi"];
+    for (i = 0; i < rtl_langs.length; i++) {
+        if (locale.substring(0,2) == rtl_langs[i]) {
+            console.log("RTL");
+            document.dir = "rtl";
+            document.body.classList.add("rtl");
+        }
+    }
+
     setText("str-discover", STRINGS.discover);
     setText("str-community", STRINGS.community);
     setText("str-shop", STRINGS.shop);
