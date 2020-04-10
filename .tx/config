@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[startpage.locales]
+file_filter = _includes/i18n/<lang>.po
+source_file = _includes/i18n/locales.pot
+source_lang = en_GB
+type = PO

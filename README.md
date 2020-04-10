@@ -23,6 +23,13 @@ Simply put, it is just a branded web page that launches you into the
 world wide web via one of the popular search engines.
 
 
+## Translations
+
+The start page speaks multiple languages! Translate on Transifex:
+
+https://www.transifex.com/ubuntu-mate/startpage/
+
+
 ## Building
 
 The website is powered by [Jekyll](https://jekyllrb.com), which can be installed

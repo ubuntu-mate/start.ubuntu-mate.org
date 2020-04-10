@@ -1,10 +1,10 @@
-#. extracted from template.json
+#. extracted from default.json
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-02 21:02+0100\n"
+"POT-Creation-Date: 2020-04-10 09:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,14 +25,50 @@ msgstr ""
 msgid "Emporium"
 msgstr ""
 
-#: .donate
+#: .funding
 msgid "Funding"
 msgstr ""
 
-#: .searchbox
-msgid "Search the web"
+#: .powered_by
+msgid "Powered by"
+msgstr ""
+
+#: .search
+msgid "Search!"
 msgstr ""
 
 #: .settings
 msgid "Preferences"
+msgstr ""
+
+#: .appearance
+msgid "Appearance"
+msgstr ""
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr ""
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr ""
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr ""
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr ""
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr ""
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr ""
+
+#: .placeholder_discussions
+msgid "Search for discussions"
 msgstr ""
