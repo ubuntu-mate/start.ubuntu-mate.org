@@ -1,0 +1,17 @@
+{
+    "discover": "Discover",
+    "community": "קהילה",
+    "shop": "Emporium",
+    "funding": "Funding",
+    "powered_by": "Powered by",
+    "search": "Search!",
+    "settings": "Preferences",
+    "appearance": "Appearance",
+    "dark_mode": "Force dark mode",
+    "prefer_engine": "מנוע חיפוש",
+    "placeholder_web": "Search the web",
+    "placeholder_videos": "Search for videos",
+    "placeholder_archive": "Search the Internet Archive",
+    "placeholder_answers": "Search for answers",
+    "placeholder_discussions": "Search for discussions"
+}
