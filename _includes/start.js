@@ -79,6 +79,7 @@ function setup_locales() {
         }
     }
 
+    document.documentElement.lang = locale;
     document.title = STRINGS.start_page;
     setText("str-discover", STRINGS.discover);
     setText("str-community", STRINGS.community);
