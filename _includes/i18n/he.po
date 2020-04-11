@@ -1,0 +1,82 @@
+# Translators:
+# shy tzedaka <shaytzedaka123@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-10 10:51+0100\n"
+"PO-Revision-Date: 2020-04-10 09:07+0000\n"
+"Last-Translator: shy tzedaka <shaytzedaka123@gmail.com>, 2020\n"
+"Language-Team: Hebrew (https://www.transifex.com/ubuntu-mate/teams/108943/he/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"X-Generator: Translate Toolkit 2.5.0\n"
+
+#: .start_page
+msgid "Start Page"
+msgstr "עמוד התחלה"
+
+#: .discover
+msgid "Discover"
+msgstr "אודות"
+
+#: .community
+msgid "Community"
+msgstr "קהילה"
+
+#: .shop
+msgid "Emporium"
+msgstr "אמפוריום"
+
+#: .funding
+msgid "Funding"
+msgstr "סבסוד"
+
+#: .powered_by
+msgid "Powered by"
+msgstr "מופעל על ידי"
+
+#: .search
+msgid "Search!"
+msgstr "חיפוש!"
+
+#: .settings
+msgid "Preferences"
+msgstr "העדפות"
+
+#: .appearance
+msgid "Appearance"
+msgstr "מראה"
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr "הפעלת מצב חשוך"
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr "מנוע חיפוש מועדף"
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr "חיפוש ברשת"
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr "חיפוש אחר קטעי ווידאו"
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr "חיפוש בארכיון האינטרנט"
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr "חיפוש אחר תשובות"
+
+#: .placeholder_discussions
+msgid "Search for discussions"
+msgstr "חיפוש אחר דיונים "
