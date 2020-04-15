@@ -16,9 +16,11 @@ abort_if_failed $?
 echo -e "\nBuild locales"
 echo "------------------------------------------------------"
 cd _includes/i18n/
+echo "- default" > ../../_data/locales.yml
 for locale in $(ls *.po); do
     lang="${locale%.*}"
     echo "-> $lang"
+    echo "- $lang" >> ../../_data/locales.yml
     po2json -t default.json $lang.po $lang.json
     abort_if_failed $?
 done
