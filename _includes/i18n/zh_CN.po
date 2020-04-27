@@ -1,0 +1,83 @@
+# 
+# Translators:
+# 邢家朋 <xingjiapeng10@163.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-22 22:21+0100\n"
+"PO-Revision-Date: 2020-04-10 09:07+0000\n"
+"Last-Translator: 邢家朋 <xingjiapeng10@163.com>, 2020\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/ubuntu-mate/teams/108943/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Translate Toolkit 2.5.0\n"
+
+#: .start_page
+msgid "Start Page"
+msgstr "开始页面"
+
+#: .discover
+msgid "Discover"
+msgstr "发现"
+
+#: .community
+msgid "Community"
+msgstr "社区"
+
+#: .shop
+msgid "Emporium"
+msgstr "商店"
+
+#: .funding
+msgid "Funding"
+msgstr "捐赠"
+
+#: .powered_by
+msgid "Powered by"
+msgstr "Powered by"
+
+#: .search
+msgid "Search!"
+msgstr "搜索！"
+
+#: .settings
+msgid "Preferences"
+msgstr "首选项"
+
+#: .appearance
+msgid "Appearance"
+msgstr "外观"
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr "直接切换到黑暗模式"
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr "设置搜索引擎"
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr "搜索网页"
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr "搜索视频"
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr "搜索 Internet Archive"
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr "搜索答案"
+
+#: .placeholder_discussions
+msgid "Search for discussions"
+msgstr "搜索解决方案"
