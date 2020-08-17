@@ -1,0 +1,83 @@
+# 
+# Translators:
+# Sai Vinoba <saivinoba@sumati.net>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-10 17:27+0100\n"
+"PO-Revision-Date: 2020-04-10 09:07+0000\n"
+"Last-Translator: Sai Vinoba <saivinoba@sumati.net>, 2020\n"
+"Language-Team: Kannada (https://www.transifex.com/ubuntu-mate/teams/108943/kn/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: kn\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Translate Toolkit 3.0.0\n"
+
+#: .start_page
+msgid "Start Page"
+msgstr "ಪ್ರಾರಂಭ ಪುಟ "
+
+#: .discover
+msgid "Discover"
+msgstr "ಶೋಧಿಸಿ"
+
+#: .community
+msgid "Community"
+msgstr "ಸಮುದಾಯ"
+
+#: .shop
+msgid "Emporium"
+msgstr "ಮಾರುಕಟ್ಟೆ"
+
+#: .funding
+msgid "Funding"
+msgstr "ಧನಸಹಾಯ"
+
+#: .powered_by
+msgid "Powered by"
+msgstr "ಚಾಲಿತ"
+
+#: .search
+msgid "Search!"
+msgstr "ಹುಡುಕಿ!"
+
+#: .settings
+msgid "Preferences"
+msgstr "ಆದ್ಯತೆಗಳು"
+
+#: .appearance
+msgid "Appearance"
+msgstr "ಗೋಚರತೆ"
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr "ಡಾರ್ಕ್ ಮೋಡ್ ಅನ್ನು ಒತ್ತಾಯಿಸಿ"
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr "ಆದ್ಯತೆಯ ಹುಡುಕು ಯಂತ್ರ"
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr "ಜಾಲವನ್ನು ಹುಡುಕಿ"
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr "ವೀಡಿಯೊಗಳಿಗಾಗಿ ಹುಡುಕಿ"
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr "ಅಂತರ್ಜಾಲ ಆರ್ಕೈವ್ ಅನ್ನು ಹುಡುಕಿ"
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr "ಉತ್ತರಗಳಿಗಾಗಿ ಹುಡುಕಿ"
+
+#: .placeholder_discussions
+msgid "Search for discussions"
+msgstr "ಚರ್ಚೆಗಳಿಗಾಗಿ ಹುಡುಕಿ"
