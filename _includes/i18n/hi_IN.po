@@ -1,0 +1,83 @@
+# 
+# Translators:
+# Panwar108 <caspian7pena@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-17 10:08+0100\n"
+"PO-Revision-Date: 2020-04-10 09:07+0000\n"
+"Last-Translator: Panwar108 <caspian7pena@gmail.com>, 2020\n"
+"Language-Team: Hindi (India) (https://www.transifex.com/ubuntu-mate/teams/108943/hi_IN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Translate Toolkit 3.0.0\n"
+
+#: .start_page
+msgid "Start Page"
+msgstr "आरंभ पृष्ठ"
+
+#: .discover
+msgid "Discover"
+msgstr "अवलोकन"
+
+#: .community
+msgid "Community"
+msgstr "समुदाय"
+
+#: .shop
+msgid "Emporium"
+msgstr "विक्रय केंद्र"
+
+#: .funding
+msgid "Funding"
+msgstr "निधि सहयोग"
+
+#: .powered_by
+msgid "Powered by"
+msgstr "इन द्वारा संचालित"
+
+#: .search
+msgid "Search!"
+msgstr "खोजें!"
+
+#: .settings
+msgid "Preferences"
+msgstr "सेटिंग्स"
+
+#: .appearance
+msgid "Appearance"
+msgstr "स्वरुप"
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr "डार्क मोड उपयोग करें"
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr "इच्छित खोज इंजन"
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr "वेब पर खोजें"
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr "वीडियो खोजें"
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr "इंटरनेट संग्रह पर खोजें"
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr "उत्तर हेतु खोज"
+
+#: .placeholder_discussions
+msgid "Search for discussions"
+msgstr "चर्चा हेतु खोज"
