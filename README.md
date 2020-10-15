@@ -4,7 +4,7 @@
 
 A personalised start page for Ubuntu MATE users on Firefox.
 
-![Screenshot - April 2020](.github/preview.png)
+![Screenshot - April 2020](.github/readme.png)
 
 
 ## Features
