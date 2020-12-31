@@ -17,6 +17,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
+        sudo apt-get update
         sudo apt-get install ruby ruby-dev make gcc
         sudo apt-get install translate-toolkit rsync
         sudo gem install bundler
