@@ -1,0 +1,83 @@
+# 
+# Translators:
+# abuyop <abuyop@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-13 14:51+0100\n"
+"PO-Revision-Date: 2020-04-10 09:07+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>, 2021\n"
+"Language-Team: Malay (Malaysia) (https://www.transifex.com/ubuntu-mate/teams/108943/ms_MY/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ms_MY\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Translate Toolkit 3.3.0\n"
+
+#: .start_page
+msgid "Start Page"
+msgstr "Laman Utama"
+
+#: .discover
+msgid "Discover"
+msgstr "Jelajahi"
+
+#: .community
+msgid "Community"
+msgstr "Komuniti"
+
+#: .shop
+msgid "Emporium"
+msgstr "Pasaraya"
+
+#: .funding
+msgid "Funding"
+msgstr "Pendanaan"
+
+#: .powered_by
+msgid "Powered by"
+msgstr "Diperkasa oleh"
+
+#: .search
+msgid "Search!"
+msgstr "Gelintar!"
+
+#: .settings
+msgid "Preferences"
+msgstr "Keutamaan"
+
+#: .appearance
+msgid "Appearance"
+msgstr "Penampilan"
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr "Paksa mod gelap"
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr "Enjin Gelintar Dikehendaki"
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr "Gelintar sesawang"
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr "Gelintar video"
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr "Gelintar Arkib Internet"
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr "Gelintar jawapan"
+
+#: .placeholder_discussions
+msgid "Search for discussions"
+msgstr "Gelintar perbincangan"
