@@ -1,0 +1,85 @@
+#
+# Translators:
+# Quentin PAGÈS, 2021
+#
+#. extracted from default.json
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-31 11:02+0100\n"
+"PO-Revision-Date: 2024-10-26 20:02+0200\n"
+"Last-Translator: Quentin PAGÈS\n"
+"Language-Team: Occitan (post 1500) (https://app.transifex.com/ubuntu-mate/"
+"teams/108943/oc/)\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: .start_page
+msgid "Start Page"
+msgstr "Pagina d’aviada"
+
+#: .discover
+msgid "Discover"
+msgstr "Descobrir"
+
+#: .community
+msgid "Community"
+msgstr "Comunitat"
+
+#: .shop
+msgid "Emporium"
+msgstr "Botiga"
+
+#: .funding
+msgid "Funding"
+msgstr "Finançament"
+
+#: .powered_by
+msgid "Powered by"
+msgstr "Propulsat per"
+
+#: .search
+msgid "Search!"
+msgstr "Cercar !"
+
+#: .settings
+msgid "Preferences"
+msgstr "Preferéncias"
+
+#: .appearance
+msgid "Appearance"
+msgstr "Aparéncia"
+
+#: .dark_mode
+msgid "Force dark mode"
+msgstr "Forçar lo mòde escur"
+
+#: .prefer_engine
+msgid "Preferred Search Engine"
+msgstr "Motor de recèrca preferit"
+
+#: .placeholder_web
+msgid "Search the web"
+msgstr "Cercar pel web"
+
+#: .placeholder_videos
+msgid "Search for videos"
+msgstr "Cercar vidèos"
+
+#: .placeholder_archive
+msgid "Search the Internet Archive"
+msgstr "Cercar sus Internet Archive"
+
+#: .placeholder_answers
+msgid "Search for answers"
+msgstr "Cercar responsas"
+
+#: .placeholder_discussions
+msgid "Search for discussions"
+msgstr "Cercar discutidas"
