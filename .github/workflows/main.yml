@@ -1,34 +1,30 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
+  Build:
+    runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
-    - name: Install Dependencies
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true
+
+    - name: Install i18n dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install ruby ruby-dev make gcc
-        sudo apt-get install translate-toolkit rsync
-        sudo gem install bundler
-        bundle install
+        sudo apt-get install translate-toolkit
 
     - name: Build website
       run: |
         scripts/build.sh
 
     - name: Deploy to server
-      if: github.event_name == 'push'
+      if: ${{ github.event_name == 'push' && github.repository == 'ubuntu-mate/start.ubuntu-mate.org' && github.ref == 'refs/heads/master' }}
       run: |
         mkdir -p $HOME/.ssh/
         chmod 700 $HOME/.ssh/
