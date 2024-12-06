@@ -31,14 +31,4 @@ jobs:
         accountId: e6fe5e31e8183c8192347f15af553766
         projectName: start-ubuntu-mate-org
         directory: _site
-        # Optional: Enable this if you want to have GitHub Deployments triggered
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Deploy to server
-      if: ${{ github.event_name == 'push' && github.repository == 'ubuntu-mate/start.ubuntu-mate.org' && github.ref == 'refs/heads/master' }}
-      run: |
-        mkdir -p $HOME/.ssh/
-        chmod 700 $HOME/.ssh/
-        echo -n "${{ secrets.SSH_MATEY }}" > $HOME/.ssh/id_rsa
-        chmod 600 $HOME/.ssh/id_rsa
-        scripts/deploy.sh
