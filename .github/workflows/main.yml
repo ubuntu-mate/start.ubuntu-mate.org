@@ -23,6 +23,17 @@ jobs:
       run: |
         scripts/build.sh
 
+    - name: Publish to Cloudflare Pages
+      if: ${{ github.event_name == 'push' && github.repository == 'ubuntu-mate/start.ubuntu-mate.org' && github.ref == 'refs/heads/master' }}
+      uses: cloudflare/pages-action@v1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: e6fe5e31e8183c8192347f15af553766
+        projectName: start-ubuntu-mate-org
+        directory: _site
+        # Optional: Enable this if you want to have GitHub Deployments triggered
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Deploy to server
       if: ${{ github.event_name == 'push' && github.repository == 'ubuntu-mate/start.ubuntu-mate.org' && github.ref == 'refs/heads/master' }}
       run: |
