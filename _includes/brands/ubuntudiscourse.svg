@@ -1,0 +1,13 @@
+<svg width="1550" height="160.04" version="1.1" viewBox="0 0 410.11 42.343" xmlns="http://www.w3.org/2000/svg">
+  <text x="216.41432" y="32.931278" style="fill-opacity:.99693;fill:#b3b3b3;font-family:Play;font-size:33.675px;letter-spacing:0px;line-height:125%;stroke-width:.84189px;text-align:center;text-anchor:middle;word-spacing:0px" xml:space="preserve"><tspan x="216.41431" y="32.931278" style="fill-opacity:.99693;fill:#b3b3b3;font-family:Ubuntu;stroke-width:.84189px">Ubuntu Community Hub</tspan></text>
+  <g transform="matrix(.10583 0 0 .10583 0 .004652)">
+    <rect class="cls-2" width="254.06" height="400" style="fill:#e95420"/>
+    <rect class="cls-1" x="30.25" y="169.38" width="193.57" height="193.57" style="fill:none"/>
+    <circle class="cls-3" cx="58.09" cy="255.92" r="26.3" style="fill:#ffffff"/>
+    <circle class="cls-3" cx="167.63" cy="198.25" r="26.3" style="fill:#ffffff"/>
+    <path class="cls-3" d="m117.41 323.62c-18.95-4.06-34.78-16.16-43.68-33.32-7.01 3.19-14.9 4.16-22.49 2.76 10.77 26.45 33.61 45.66 61.65 51.67 6.15 1.32 12.42 1.96 18.68 1.92-4.83-6.35-7.52-14.01-7.7-21.99-2.17-.24-4.33-.59-6.45-1.05z" style="fill:#ffffff"/>
+    <circle class="cls-3" cx="161.71" cy="323.76" r="26.3" style="fill:#ffffff"/>
+    <path class="cls-3" d="m198.31 314.1c8.18-10.31 13.94-22.5 16.71-35.45 4.84-22.59.32-46.29-12.4-65.51-3.03 7.14-8.17 13.17-14.79 17.32 7.1 13.38 9.26 28.82 6.08 43.67-1.56 7.27-4.31 14.12-8.18 20.38 6.19 5.08 10.56 11.91 12.59 19.6z" style="fill:#ffffff"/>
+    <path class="cls-3" d="m56.06 218.2c.67-.04 1.34-.05 2-.05 2.66 0 5.31.28 7.94.85 4.29.92 8.32 2.54 12.01 4.84 11.84-17.03 30.95-27.25 51.65-27.63.11-1.99.38-3.97.79-5.92 1.21-5.63 3.67-10.9 7.19-15.41-33.08-2.62-65.22 14.45-81.59 43.33z" style="fill:#ffffff"/>
+  </g>
+</svg>

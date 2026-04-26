@@ -7,7 +7,7 @@ engines:
     - youtube
     - internetarchive
     - askubuntu
-    - ubuntumatecommunity
+    - ubuntudiscourse
 
 config:
     google:
@@ -89,10 +89,10 @@ config:
         input_name: "q"
         #fields:
 
-    ubuntumatecommunity:
+    ubuntudiscourse:
         placeholder_string: "discussions"
         method: "get"
-        action: "https://ubuntu-mate.community/search"
+        action: "https://discourse.ubuntu.com/search"
         name: "search"
         input_name: "q"
         #fields:
