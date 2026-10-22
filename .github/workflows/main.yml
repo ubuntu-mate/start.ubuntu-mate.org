@@ -6,7 +6,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -25,10 +25,9 @@ jobs:
 
     - name: Publish to Cloudflare Pages
       if: ${{ github.event_name == 'push' && github.repository == 'ubuntu-mate/start.ubuntu-mate.org' && github.ref == 'refs/heads/master' }}
-      uses: cloudflare/pages-action@v1
+      uses: cloudflare/wrangler-action@v4
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: e6fe5e31e8183c8192347f15af553766
-        projectName: start-ubuntu-mate-org
-        directory: _site
+        command: pages deploy _site --project-name=start-ubuntu-mate-org --branch=master
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
